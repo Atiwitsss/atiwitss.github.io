@@ -95,19 +95,19 @@
         <img src="https://via.placeholder.com/300x200" alt="เสื้อยืดขาว">
         <h3>เสื้อยืดสีขาว</h3>
         <p>ราคา: 250 บาท</p>
-        <button>ซื้อเลย</button>
+        <button onclick="addToCart('เสื้อยืดสีขาว', 250)">ซื้อเลย</button>
     </div>
     <div class="product">
         <img src="https://via.placeholder.com/300x200" alt="เสื้อเชิ้ตดำ">
         <h3>เสื้อเชิ้ตสีดำ</h3>
         <p>ราคา: 500 บาท</p>
-        <button>ซื้อเลย</button>
+        <button onclick="addToCart('เสื้อเชิ้ตสีดำ', 500)">ซื้อเลย</button>
     </div>
     <div class="product">
         <img src="https://via.placeholder.com/300x200" alt="เสื้อแจ็คเก็ต">
         <h3>แจ็คเก็ตเท่ๆ</h3>
         <p>ราคา: 800 บาท</p>
-        <button>ซื้อเลย</button>
+        <button onclick="addToCart('แจ็คเก็ตเท่ๆ', 800)">ซื้อเลย</button>
     </div>
 </div>
 
@@ -125,6 +125,14 @@
         <p>Email: example@gmail.com</p>
     </div>
 </div>
+
+<script>
+    // ฟังก์ชันเพิ่มสินค้าเข้าตะกร้า
+    function addToCart(productName, price) {
+        alert(`มึงเลือกซื้อ ${productName} ราคา ${price} บาท เรียบร้อยแล้ว!`);
+        console.log(`สินค้า: ${productName}, ราคา: ${price} บาท`);
+    }
+</script>
 
 </body>
 </html>
