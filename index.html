@@ -57,29 +57,11 @@
         .product button:hover {
             background-color: #555;
         }
-        .payment-section {
+        .status {
+            margin-top: 30px;
             text-align: center;
-            margin: 40px 0;
-        }
-        .payment-info {
-            margin: 20px auto;
-            max-width: 400px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .payment-info img {
-            width: 200px;
-            margin: 10px 0;
-        }
-        .payment-info p {
-            font-size: 16px;
-            color: #555;
-        }
-        .contact {
-            margin-top: 20px;
-            color: #777;
+            font-size: 18px;
+            color: green;
         }
     </style>
 </head>
@@ -111,26 +93,14 @@
     </div>
 </div>
 
-<div class="payment-section">
-    <h2>วิธีการชำระเงิน</h2>
-    <div class="payment-info">
-        <img src="https://via.placeholder.com/200" alt="QR Code PromptPay">
-        <p>ชื่อบัญชี: <b>นายตัวอย่าง สมบูรณ์</b></p>
-        <p>หมายเลข PromptPay: <b>080-123-4567</b></p>
-        <p>จำนวนเงินที่ต้องโอน: <b>กรุณาระบุเอง</b></p>
-        <p>โปรดส่งหลักฐานการโอนเงินมาทาง LINE หรือ Email ด้านล่าง</p>
-    </div>
-    <div class="contact">
-        <p>LINE: @ชื่อมึง</p>
-        <p>Email: example@gmail.com</p>
-    </div>
-</div>
+<div class="status" id="statusMessage"></div>
 
 <script>
     // ฟังก์ชันเพิ่มสินค้าเข้าตะกร้า
     function addToCart(productName, price) {
-        alert(`มึงเลือกซื้อ ${productName} ราคา ${price} บาท เรียบร้อยแล้ว!`);
-        console.log(`สินค้า: ${productName}, ราคา: ${price} บาท`);
+        // แสดงข้อความในหน้าเว็บ
+        const statusMessage = document.getElementById("statusMessage");
+        statusMessage.innerText = `มึงเลือกซื้อ ${productName} ราคา ${price} บาท เรียบร้อยแล้ว!`;
     }
 </script>
 
